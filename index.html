@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhagavad Gita Verse Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Bhagavad Gita Verse Finder</h1>
+    <form id="search-form">
+      <label for="chapter-select">Select Chapter:</label>
+      <select id="chapter-select" required>
+        <option value="">--Select Chapter--</option>
+        <!-- Chapters will be populated by JavaScript -->
+      </select>
+
+      <label for="verse-select">Select Verse:</label>
+      <select id="verse-select" required>
+        <option value="">--Select Verse--</option>
+        <!-- Verses will be populated by JavaScript -->
+      </select>
+
+      <button type="submit">Search</button>
+    </form>
+    <div id="result-container"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
