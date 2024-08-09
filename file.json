@@ -1,0 +1,81 @@
+{
+    "chapters": [
+        {
+            "chapter_number": 1,
+            "chapter_name": "Arjuna Vishada Yoga",
+            "verses": [
+                {
+                    "verse_number": 1,
+                    "sanskrit": "धृतराष्ट्र उवाच | धर्मक्षेत्रे कुरुक्षेत्रे समवेता युयुत्सवः | मामकाः पाण्डवाश्चैव किमकुर्वत सञ्जय || 1 ||",
+                    "translation": "Dhritarashtra said: O Sanjaya, assembled in the holy land of Kurukshetra and desiring to fight, what did my sons and the sons of Pandu do?",
+                    "transliteration": "dhṛtarāṣhṭra uvācha dharmakṣhetre kurukṣhetre samavetā yuyutsavaḥ māmakāḥ pāṇḍavāśhchaiva kimakurvata sañjaya",
+                    "meaning": "Dhritarashtra inquires about the events happening in the battlefield of Kurukshetra where his sons and the Pandavas are assembled to fight."
+                },
+                {
+                    "verse_number": 2,
+                    "sanskrit": "सञ्जय उवाच | द्रोणमुपसंगम्य राजा वचनमब्रवीत् | पश्यैतां पाण्डुपुत्राणामाचार्य महतीं चमूम् || 2 ||",
+                    "translation": "Sanjaya said: O King, after observing the Pandava army arranged in military formation by the son of Drupada, King Drona spoke the following words:",
+                    "transliteration": "sañjaya uvācha dronamupasaṅgamya rājā vachanamabravīt pāśhyaitāṁ pāṇḍuputrāṇāmācārya mahatīṁ chamūm",
+                    "meaning": "Sanjaya describes how King Drona saw the massive army of the Pandavas and spoke to the King."
+                },
+                {
+                    "verse_number": 3,
+                    "sanskrit": "अस्मिन्स्थितो राजा धर्मक्षेत्रे कुरुक्षेत्रे | समवेता युयुत्सवः | मामकाः पाण्डवाश्चैव किमकुर्वत सञ्जय || 3 ||",
+                    "translation": "O Sanjaya, in this holy land of Kurukshetra, what did my sons and the sons of Pandu do, being assembled and desiring to fight?",
+                    "transliteration": "asminsthitō rājā dharmakṣhetre kurukṣhetre samavetā yuyutsavaḥ māmakāḥ pāṇḍavāśhchaiva kimakurvata sañjaya",
+                    "meaning": "Dhritarashtra asks Sanjaya to describe what happened in Kurukshetra with both his sons and the Pandavas assembled for battle."
+                },
+                {
+                    "verse_number": 4,
+                    "sanskrit": "धृतराष्ट्र उवाच | संजय उवाच | पश्यैतां पाण्डुपुत्राणामाचार्य महतीं चमूम् || 4 ||",
+                    "translation": "Sanjaya said: O King, behold this mighty army of the sons of Pandu, arrayed by the son of Drupada, your wise disciple.",
+                    "transliteration": "sañjaya uvācha pāśhyaitāṁ pāṇḍuputrāṇāmācārya mahatīṁ chamūm",
+                    "meaning": "Sanjaya describes how King Drona saw the powerful army of the Pandavas assembled and ready for battle."
+                },
+                {
+                    "verse_number": 5,
+                    "sanskrit": "अयनेन वशी कर्णामुर्वेष्टितयुयुत्सवः | कालकोटि विधायमा वसुघ्नः पौरुषं व्यसात् || 5 ||",
+                    "translation": "Behold the army of the sons of Pandu, arrayed by your wise disciple. Behold this mighty army of the Pandavas.",
+                    "transliteration": "ayanena vaśī karṇāmurveṣṭitayuyutsavaḥ kālakōṭi vidhāyamā vasughnaḥ pauruṣaṁ vyasāt",
+                    "meaning": "Sanjaya explains the might of the Pandava army, arranged meticulously by the great warrior Drona."
+                },
+                {
+                    "verse_number": 6,
+                    "sanskrit": "तत्रापश्यत्संनिहितं पुराणाश्वसतात्मनम् | परुषं सप्तवर्गाणां प्रलंबं सन्दर्शयन् || 6 ||",
+                    "translation": "Behold, O King, the army of the sons of Pandu, arrayed by the son of Drupada, is a vast and mighty force.",
+                    "transliteration": "tatrāpaśhyatsannihitaṁ purāṇāśvasatātmanam paruṣaṁ saptavargāṇāṁ pralaṁbaṁ sandarśayan",
+                    "meaning": "Sanjaya describes the vastness of the Pandava army, which is arranged and equipped for battle."
+                },
+                {
+                    "verse_number": 7,
+                    "sanskrit": "सत्त्वम् आत्मानं सुहृत्प्रभावमुपागतम् | सञ्जयापि दृष्टमपि कुशाग्रास्तस्य शिष्यवत् || 7 ||",
+                    "translation": "Behold, O King, the army of the sons of Pandu, arrayed by the son of Drupada, is a mighty force.",
+                    "transliteration": "sattvam ātmānaṁ suhrṛtpabhāvamupāgatam sañjayāpi dṛṣṭamapi kuśāgrāstasya śiṣyavat",
+                    "meaning": "Sanjaya describes the formidable power of the Pandava army, emphasizing its great strength and strategic arrangement."
+                },
+                {
+                    "verse_number": 8,
+                    "sanskrit": "एवं व्यासदर्शिता हरिश्वायाध्वजस्ततः | शिष्यं ब्रह्मसंयुक्तां विद्वानन्तरमागतम् || 8 ||",
+                    "translation": "O King, behold this mighty army of the sons of Pandu, arrayed by the son of Drupada, your wise disciple.",
+                    "transliteration": "evaṁ vyāsadarśitā hariśvāyādvajastataḥ śiṣyaṁ brahmasaṅyuktāṁ vidvānantaramāgatam",
+                    "meaning": "Sanjaya describes the magnificence of the Pandava army, arranged with expert strategic knowledge by Dronacharya."
+                },
+                {
+                    "verse_number": 9,
+                    "sanskrit": "पौरुषं विद्वान् धर्मार्थद्वारं स्ववृत्तये | परुषं सहस्त्रभातं चतुःसप्ततिरुच्चरन || 9 ||",
+                    "translation": "Behold, this mighty army of the sons of Pandu, arrayed by your wise disciple. It is an enormous and formidable force.",
+                    "transliteration": "pauruṣaṁ vidvān dharmārthadvāraṁ svavṛttaye paruṣaṁ sahastrabhātaṁ catuḥsaptatiruccaran",
+                    "meaning": "Sanjaya highlights the power and size of the Pandava army, arranged skillfully by Dronacharya."
+                },
+                {
+                    "verse_number": 10,
+                    "sanskrit": "यथा महात्मना वाचस्तरास्त्विह किञ्चन | पृथिव्यां गन्धमापन्ना विप्रच्छन्ति युयुत्सवः || 10 ||",
+                    "translation": "Behold this mighty army of the sons of Pandu, arrayed by the son of Drupada, your wise disciple.",
+                    "transliteration": "yathā mahātmanā vācastarāstva iha kiñcana pṛthivyāṁ gandhamāpannā vipracchanti yuyutsavaḥ",
+                    "meaning": "Sanjaya speaks of the grandeur of the Pandava army, arranged strategically by the son of Drupada, Dronacharya."
+                }
+                
+            ]
+        }
+    ]
+}
