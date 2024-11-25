@@ -1,6 +1,10 @@
+/* General body styling for laptops (default) */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-image: url('web.jpg'); /* Background for laptops */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,66 +12,108 @@ body {
   margin: 0;
 }
 
-body {
-  background-image: url('main.jpeg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+/* Background image for mobile  */
+@media (max-width: 768px) {
+  body {
+    background-image: url('phn.png');
+    background-color: orange;
+    background-color: rgba(219, 156, 18, 0.704);
+  }
+  .container {
+    background-color: rgba(194, 103, 12, 0.538);
+    box-shadow: 0 0 10px rgba(218, 156, 11, 0.1);
+    padding: 20px;
+  }
 }
 
+/* Container for the form and result display */
 .container {
-  background-color: rgba(23, 23, 85, 0.538);
+  background-color: rgba(194, 118, 12, 0.538);
   padding: 20px;
   border-radius: 25px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 80%;
   max-width: 500px;
-}
-.container:hover{
-  background-color: rgba(23, 23, 85, 0.868);
- 
-}
-#result-container:hover{
- 
- color: white;
- 
- 
+  color: #ffffff;
 }
 
 
 
+#result-container:hover {
+  color: white;
+}
+
+/* Heading styling */
 h1 {
   text-align: center;
+  color: #fff;
 }
 
+/* Form structure */
 form {
   display: flex;
   flex-direction: column;
 }
 
-select {
+label {
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+select, input {
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 15px;
   border: 2px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #000;
+  font-size: 16px;
 }
 
+/* Keyword search input styling */
+input[type="text"] {
+  border-radius: 15px;
+  border: 2px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #000;
+}
+
+/* Button styling */
 button {
   padding: 10px;
   border: none;
   border-radius: 15px;
-  background-color: rgba(47, 47, 142, 0.704);
+  background-color: rgba(237, 102, 6, 0.704);
   color: white;
   cursor: pointer;
+  font-size: 16px;
 }
 
 button:hover {
   background-color: #09386ac5;
   text-shadow: black;
-
 }
 
+/* Result container for the verse display */
 #result-container {
   margin-top: 20px;
 }
 
+.verse {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.verse h2 {
+  margin: 0 0 10px;
+}
+
+.verse p {
+  margin: 5px 0;
+}
