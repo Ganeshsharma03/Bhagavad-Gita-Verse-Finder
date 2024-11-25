@@ -6,21 +6,27 @@
   <title>Bhagavad Gita Verse Finder</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+
   <div class="container">
     <h1>Bhagavad Gita Verse Finder</h1>
     <form id="search-form">
+      <!-- Dropdown for selecting chapter -->
       <label for="chapter-select">Select Chapter:</label>
-      <select id="chapter-select" required>
+      <select id="chapter-select">
         <option value="">--Select Chapter--</option>
-        <!-- Chapters will be populated by JavaScript -->
+        <!-- Options will be populated by JavaScript -->
       </select>
 
+      <!-- Dropdown for selecting verse -->
       <label for="verse-select">Select Verse:</label>
-      <select id="verse-select" required>
+      <select id="verse-select">
         <option value="">--Select Verse--</option>
-        <!-- Verses will be populated by JavaScript -->
+        <!-- Options will be populated by JavaScript -->
       </select>
+
+      <!-- Input field for keyword search -->
+      <label for="keyword-search">Or Search by Keyword:</label>
+      <input type="text" id="keyword-search" placeholder="Enter keywords...">
 
       <button type="submit">Search</button>
     </form>
