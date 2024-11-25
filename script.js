@@ -1,100 +1,63 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const searchForm = document.getElementById('search-form');
-  const chapterSelect = document.getElementById('chapter-select');
-  const verseSelect = document.getElementById('verse-select');
-  const resultContainer = document.getElementById('result-container');
+document.addEventListener('DOMContentLoaded', () => {
+  const $ = id => document.getElementById(id);
+  const [searchForm, chapterSelect, verseSelect, resultContainer, keywordInput] = 
+        ['search-form', 'chapter-select', 'verse-select', 'result-container', 'keyword-search'].map($);
 
-  let data = null;
+  let data;
 
-  // Load JSON data
   fetch('bhagavad-gita.json')
-      .then(response => response.json())
-      .then(jsonData => {
-          data = jsonData;
-          populateChapters();
+      .then(res => res.json())
+      .then(json => {
+          data = json;
+          chapterSelect.innerHTML += data.chapters.map(chap => 
+              `<option value="${chap.chapter_number}">Chapter ${chap.chapter_number} - ${chap.chapter_name}</option>`
+          ).join('');
       })
-      .catch(error => console.error('Error loading JSON:', error));
+      .catch(err => console.error('Error loading JSON:', err));
 
-  // Populate chapters dropdown
-  function populateChapters() {
-      if (!data) return;
-
-      data.chapters.forEach(chapter => {
-          const option = document.createElement('option');
-          option.value = chapter.chapter_number;
-          option.textContent = `Chapter ${chapter.chapter_number} - ${chapter.chapter_name}`;
-          chapterSelect.appendChild(option);
-      });
-
-      chapterSelect.addEventListener('change', function () {
-          populateVerses(this.value);
-      });
-  }
-
-  // Populate verses dropdown based on selected chapter
-  function populateVerses(chapterNumber) {
-      verseSelect.innerHTML = '<option value="">--Select Verse--</option>'; // Clear previous options
-
-      if (!data) return;
-
-      const chapter = data.chapters.find(chap => chap.chapter_number == chapterNumber);
-      if (chapter) {
-          chapter.verses.forEach(verse => {
-              const option = document.createElement('option');
-              option.value = verse.verse_number;
-              option.textContent = `Verse ${verse.verse_number}`;
-              verseSelect.appendChild(option);
-          });
-      }
-  }
-
-  // Handle form submission
-  searchForm.addEventListener('submit', function (event) {
-      event.preventDefault();
-      const chapterNumber = chapterSelect.value;
-      const verseNumber = verseSelect.value;
-      const result = searchVerses(chapterNumber, verseNumber);
-      displayResult(result);
+  chapterSelect.addEventListener('change', () => {
+      const chapter = data.chapters.find(chap => chap.chapter_number == chapterSelect.value);
+      verseSelect.innerHTML = '<option value="">--Select Verse--</option>' + 
+          (chapter ? chapter.verses.map(verse => 
+              `<option value="${verse.verse_number}">Verse ${verse.verse_number}</option>`).join('') : '');
+      toggleInputs();
   });
 
-  // Search for the selected verse
-  function searchVerses(chapterNumber, verseNumber) {
-      if (!data) return [];
+  searchForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const [chapterNum, verseNum, keyword] = [chapterSelect.value, verseSelect.value, keywordInput.value.trim().toLowerCase()];
+      if (keyword && !chapterNum && !verseNum) displayResult(searchByKeyword(keyword));
+      else if (chapterNum && verseNum && !keyword) displayResult(searchVerses(chapterNum, verseNum));
+      else resultContainer.innerHTML = '<p>Please either select a chapter and verse, or enter a keyword. Do not use both.</p>';
+  });
 
-      let results = [];
-      const chapter = data.chapters.find(chap => chap.chapter_number == chapterNumber);
-      if (chapter) {
-          const verse = chapter.verses.find(verse => verse.verse_number == verseNumber);
-          if (verse) {
-              results.push({
-                  chapter: chapter.chapter_name,
-                  verse_number: verse.verse_number,
-                  ...verse
-              });
-          }
-      }
-      return results;
-  }
+  const searchVerses = (chapterNum, verseNum) => {
+      const chapter = data.chapters.find(chap => chap.chapter_number == chapterNum);
+      const verse = chapter?.verses.find(verse => verse.verse_number == verseNum);
+      return verse ? [{ chapter: chapter.chapter_name, ...verse }] : [];
+  };
 
-  // Display the result
-  function displayResult(verses) {
-      resultContainer.innerHTML = '';
-      if (verses.length === 0) {
-          resultContainer.innerHTML = '<p>No verses found.</p>';
-          return;
-      }
+  const searchByKeyword = keyword => 
+      data.chapters.flatMap(chap => chap.verses.filter(verse => 
+          [verse.translation, verse.transliteration, verse.meaning].some(text => text.toLowerCase().includes(keyword)))
+          .map(verse => ({ chapter: chap.chapter_name, ...verse })));
 
-      verses.forEach(verse => {
-          const verseDiv = document.createElement('div');
-          verseDiv.classList.add('verse');
-          verseDiv.innerHTML = `
+  const displayResult = verses => {
+      resultContainer.innerHTML = verses.length ? verses.map(verse => `
+          <div class="verse">
               <h2>Chapter ${verse.chapter}</h2>
               <p><strong>Verse ${verse.verse_number}:</strong> ${verse.sanskrit}</p>
               <p><strong>Translation:</strong> ${verse.translation}</p>
               <p><strong>Transliteration:</strong> ${verse.transliteration}</p>
               <p><strong>Meaning:</strong> ${verse.meaning}</p>
-          `;
-          resultContainer.appendChild(verseDiv);
-      });
-  }
+          </div>`).join('') : '<p>No verses found.</p>';
+  };
+
+  const toggleInputs = () => {
+      const [keyword, chapter, verse] = [keywordInput.value.trim(), chapterSelect.value, verseSelect.value];
+      chapterSelect.disabled = verseSelect.disabled = !!keyword;
+      keywordInput.disabled = !!chapter || !!verse;
+  };
+
+  keywordInput.addEventListener('input', toggleInputs);
 });
