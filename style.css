@@ -92,10 +92,7 @@ button {
   font-size: 16px;
 }
 
-button:hover {
-  background-color: #09386ac5;
-  text-shadow: black;
-}
+
 
 /* Result container for the verse display */
 #result-container {
