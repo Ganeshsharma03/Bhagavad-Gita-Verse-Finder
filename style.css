@@ -15,7 +15,7 @@ body {
 /* Background image for mobile  */
 @media (max-width: 768px) {
   body {
-    background-image: url('phn.png');
+   background-image: url('phn.png.jpeg');
     background-color: orange;
     background-color: rgba(219, 156, 18, 0.704);
   }
