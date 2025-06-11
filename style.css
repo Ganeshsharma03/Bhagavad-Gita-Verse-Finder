@@ -9,24 +9,9 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width :100vh;
-  
+  width: 100vw;
   margin: 0;
-   overflow:hidden;
-}
-
-/* Background image for mobile  */
-@media (max-width: 768px) {
-  body {
-   background-image: url('phn.png.jpeg');
-    background-color: orange;
-    background-color: rgba(219, 156, 18, 0.704);
-  }
-  .container {
-    background-color: rgba(194, 103, 12, 0.538);
-    box-shadow: 0 0 10px rgba(218, 156, 11, 0.1);
-    padding: 20px;
-  }
+  overflow: hidden;
 }
 
 /* Container for the form and result display */
@@ -37,15 +22,9 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 80%;
   max-width: 500px;
-  max-height:100vh;
+  max-height: 90vh;
   color: #ffffff;
-  overflow-y:auto;
-}
-
-
-
-#result-container:hover {
-  color: white;
+  overflow-y: auto;
 }
 
 /* Heading styling */
@@ -97,8 +76,6 @@ button {
   font-size: 16px;
 }
 
-
-
 /* Result container for the verse display */
 #result-container {
   margin-top: 20px;
@@ -118,4 +95,43 @@ button {
 
 .verse p {
   margin: 5px 0;
+}
+
+/* Hover effect */
+#result-container:hover {
+  color: white;
+}
+
+/* ----------- MOBILE STYLING ------------ */
+@media (max-width: 768px) {
+  body {
+    background-image: url('phn.png.jpeg'); /* Mobile background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(219, 156, 18, 0.704);
+    flex-direction: column;
+    padding: 15px;
+    height: auto;
+    width: 100vw;
+    overflow: auto;
+  }
+
+  .container {
+    width: 95%;
+    max-width: none;
+    background-color: rgba(194, 103, 12, 0.6);
+    box-shadow: 0 0 10px rgba(218, 156, 11, 0.4);
+    padding: 15px;
+    border-radius: 20px;
+  }
+
+  select, input, button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
 }
