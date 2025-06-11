@@ -1,4 +1,4 @@
-/* ------------------ DEFAULT DESKTOP STYLING ------------------ */
+/* ---------- BASE STYLES FOR DESKTOP/LAPTOP ---------- */
 body {
   font-family: Arial, sans-serif;
   background-image: url('web.jpg');
@@ -16,18 +16,17 @@ body {
 }
 
 .container {
-  background-color: rgba(255, 140, 0, 0.75); /* Transparent orange */
+  background-color: rgba(255, 140, 0, 0.8);
   padding: 30px 40px;
   border-radius: 25px;
   width: 80%;
   max-width: 500px;
-  color: #ffffff;
+  color: #fff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
 }
 
 h1 {
   text-align: center;
-  color: #fff;
   margin-bottom: 20px;
 }
 
@@ -38,7 +37,6 @@ form {
 
 label {
   margin-bottom: 5px;
-  color: #fff;
 }
 
 select,
@@ -58,8 +56,8 @@ button {
   color: white;
   border: none;
   font-weight: bold;
-  transition: background-color 0.3s ease;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -78,16 +76,8 @@ button:hover {
   color: #000;
 }
 
-.verse h2 {
-  margin: 0 0 10px;
-}
-
-.verse p {
-  margin: 5px 0;
-}
-
-/* ------------------ MOBILE VIEW ------------------ */
-@media (max-width: 768px) {
+/* ---------- MEDIA QUERY FOR MOBILE DEVICES ---------- */
+@media screen and (max-width: 768px) {
   body {
     background-image: url('phn.png.jpeg');
     background-size: cover;
@@ -98,6 +88,7 @@ button:hover {
     align-items: center;
     overflow-y: auto;
     height: auto;
+    width: 100%;
     padding: 20px 10px;
   }
 
@@ -105,9 +96,9 @@ button:hover {
     width: 100%;
     max-width: none;
     padding: 20px 15px;
-    background-color: rgba(255, 140, 0, 0.85);
-    box-shadow: none;
     border-radius: 20px;
+    background-color: rgba(255, 140, 0, 0.9);
+    box-shadow: none;
   }
 
   h1 {
