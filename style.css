@@ -1,35 +1,39 @@
-/* ---------- BASE STYLES FOR DESKTOP/LAPTOP ---------- */
+/* General body styling for all devices */
 body {
   font-family: Arial, sans-serif;
   background-image: url('web.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
+/* Container styling for form */
 .container {
-  background-color: rgba(255, 140, 0, 0.8);
-  padding: 30px 40px;
+  background-color: rgba(255, 140, 0, 0.85);
+  padding: 20px;
   border-radius: 25px;
-  width: 80%;
-  max-width: 500px;
-  color: #fff;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 450px;
+  color: #ffffff;
+  overflow-y: auto;
 }
 
+/* Heading */
 h1 {
   text-align: center;
+  color: #fff;
   margin-bottom: 20px;
 }
 
+/* Form structure */
 form {
   display: flex;
   flex-direction: column;
@@ -37,80 +41,80 @@ form {
 
 label {
   margin-bottom: 5px;
+  font-weight: bold;
+  color: #fff;
 }
 
-select,
-input[type="text"],
-button {
-  padding: 12px;
+select, input[type="text"] {
+  padding: 10px;
   margin-bottom: 15px;
-  border-radius: 15px;
+  border-radius: 12px;
   border: 2px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.9);
   font-size: 16px;
-  background-color: rgba(255, 255, 255, 0.85);
   color: #000;
 }
 
+/* Button styling */
 button {
-  background-color: rgba(255, 94, 0, 0.85);
-  color: white;
+  padding: 10px;
   border: none;
+  border-radius: 15px;
+  background-color: orange;
+  color: white;
   font-weight: bold;
+  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 button:hover {
-  background-color: rgba(255, 60, 0, 0.95);
+  background-color: #e67300;
 }
 
+/* Result container */
 #result-container {
   margin-top: 20px;
 }
 
 .verse {
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 15px;
   border-radius: 10px;
   margin-bottom: 10px;
   color: #000;
 }
 
-/* ---------- MEDIA QUERY FOR MOBILE DEVICES ---------- */
-@media screen and (max-width: 768px) {
+.verse h2 {
+  margin: 0 0 10px;
+}
+
+.verse p {
+  margin: 5px 0;
+}
+
+/* 📱 Mobile Responsive Adjustments */
+@media (max-width: 768px) {
   body {
     background-image: url('phn.png.jpeg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    overflow-y: auto;
-    height: auto;
-    width: 100%;
-    padding: 20px 10px;
+    padding: 10px;
   }
 
   .container {
     width: 100%;
-    max-width: none;
-    padding: 20px 15px;
+    margin: 0 10px;
     border-radius: 20px;
-    background-color: rgba(255, 140, 0, 0.9);
-    box-shadow: none;
+    padding: 15px;
+  }
+
+  select, input[type="text"], button {
+    font-size: 14px;
+    padding: 8px;
   }
 
   h1 {
-    font-size: 22px;
-    margin-bottom: 15px;
-  }
-
-  select,
-  input[type="text"],
-  button {
-    font-size: 14px;
-    padding: 10px;
-    margin-bottom: 12px;
+    font-size: 20px;
   }
 }
